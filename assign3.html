@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+	<meta charset="utf-8">
+	<title>2021 merry christmas!</title>
+<style type="text/css">
+	body {
+			cursor: url("snowman.png"), default;
+			background-color: #408155;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left: 0;
+			margin-right: 0;
+			margin: 0;
+		}
+		.header {
+			position: fixed;			
+			display: flex;
+			justify-content: space-between;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  height: 150px;
+		  margin-bottom: 200px;
+		  z-index: 7777;
+		}
+		.home {
+			  float: left;
+        transition-duration: 0.15s;
+        cursor: pointer;
+		}
+
+    .home:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+		.container{
+			position: fixed;	
+			display: flex;
+			justify-content: space-between;
+			margin-top: 170px;
+			margin-left: 20px;
+			margin-right: 20px;
+			z-index: 3;
+			width: 100%;
+		}
+
+	.title-3 {
+		position: fixed;
+		z-index: 99999;
+	}
+
+	.container1 {
+		display: flex;
+		justify-content: space-between; 
+		margin-top: 350px;
+		margin-right: 750px;
+		margin-left: 645px;
+		margin-bottom: 50px;
+	}
+	.elfface {
+		margin-left: 45px;
+		animation: slide-top 1s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.5s
+	}
+	.bubble {
+		margin-left: 100px;
+		margin-top: -180px;
+		animation: slide-top 0.5s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.8s
+	}
+	.container2 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 160px;
+		margin-left: 350px;
+		margin-right: 350px;
+	}
+
+	.container3 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 160px;
+		margin-left: 650px;
+		margin-right: 660px;
+		padding-bottom: 80px;
+	}
+
+	.gift {
+        cursor: pointer;
+	}
+
+	.back {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .back:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+	.next {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .next:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+ @keyframes slide-top {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="bgm" style="">
+				<div class="play" id="play1" style="position: absolute; margin-top: 14px; margin-left: 8px; z-index: 3;">
+					<img id="playbtn" src="btn_play.png" width="15px">
+					<audio id="bgmSnd" src="bgm.mp3"></audio>
+				</div>
+				<marquee class="bgmtitle" style="position: absolute; margin-top: 15px; margin-left: 85px; width: 259px;">
+					<img src="bgm-title.png" width="205px">
+				</marquee>
+				<div class="bgmbox" style="position: absolute; z-index:1"><img src="bgm.png" width="350px"></div>
+			</div>
+		<div class="home" id="home" style="margin-right: 45px;"><img src="btn_home.png" width="130px"></div>	
+		</div>	
+			<div class="title-3" style="position: absolute; z-index: 1;">
+		<img src="title-3.png" width="100%">
+			</div>
+	</div>
+
+
+	<div>
+		<div class="astext3" style="margin-top: 400px; text-align: center;"><img src="astext3.png" width="1150px"></div>
+	</div>
+
+	<div class="container1">
+		<div class="elfface" style="position: absolute; z-index: 1;"><img src="elfface.png" width="110ppx"></div>
+		<div class="bubble"><img src="bubble4.png" width="500px"></div>
+	</div>
+	<div style="text-align: center; margin-top: 200px"><img src="text5.png" width="400px">
+		</div>
+	<div class="container2">
+		<div><img class="gift" id="gift1" src="gift1.png" width="110px"></div>
+		<div><img class="gift"id="gift2" src="gift2.png" width="150px"></div>
+		<div><img class="gift"id="gift3" src="gift3.png" width="110px"></div>
+		<div><img class="gift" id="gift4" src="gift4.png" width="90px"></div>
+		<div><img class="gift" id="gift5" src="gift5.png" width="110px"></div>
+	</div>
+
+	<div class="container3">
+		<div class="back" id="back"><img src="btn_back.png" width="170px"></div>
+		<div class="next" id="next"><img src="btn_next.png" width="170px"></div>
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+	
+	var state = false;
+  play1.onclick = function() {
+  	console.log("asd")
+  	var p = document.getElementById('playbtn');
+    if (state) {
+    	bgmSnd.pause(); 
+    	p.src = "btn_play.png";
+    	state = false;
+    } else {
+    	bgmSnd.play(); 
+    	p.src = "btn_pause.png"; 
+    	state = true;
+    }
+  }
+
+  home.onclick = function(){
+  	location.href = "index.html";
+  }
+  let btn1 = 0;
+  let btn2 = 0;
+  let btn3 = 0;
+  let btn4 = 0;
+  let btn5 = 0;
+
+	gift1.onclick = function(){
+		if(btn1 === 0) {
+			gift1.style.width = "130px";
+			gift1.src =	"box1.png";
+		}
+		else if(btn1 === 1) {
+			gift1.src = "box2.png"
+		}
+		else if(btn1 === 2) {
+			gift1.src = "box3.png"
+		}
+		else if(btn1 === 3) {
+			gift1.src = "box4.png"
+		}
+		btn1++;
+	}
+	gift2.onclick = function(){
+		if(btn2 === 0) {
+			gift2.style.width = "130px";
+			gift2.src =	"box1.png";
+		}
+		else if(btn2 === 1) {
+			gift2.src = "box2.png"
+		}
+		else if(btn2 === 2) {
+			gift2.src = "box3.png"
+		}
+		else if(btn2 === 3) {
+			gift2.src = "box4.png"
+		}
+		btn2++;
+	}
+	gift3.onclick = function(){
+		if(btn3 === 0) {
+			gift3.style.width = "130px";
+			gift3.src =	"box1.png";
+		}
+		else if(btn3 === 1) {
+			gift3.src = "box2.png"
+		}
+		else if(btn3 === 2) {
+			gift3.src = "box3.png"
+		}
+		else if(btn3 === 3) {
+			gift3.src = "box4.png"
+		}
+		btn3++;
+	}
+	gift4.onclick = function(){
+		if(btn4 === 0) {
+			gift4.style.width = "130px";
+			gift4.src =	"box1.png";
+		}
+		else if(btn4 === 1) {
+			gift4.src = "box2.png"
+		}
+		else if(btn4 === 2) {
+			gift4.src = "box3.png"
+		}
+		else if(btn4 === 3) {
+			gift4.src = "box4.png"
+		}
+		btn4++;
+	}
+	gift5.onclick = function(){
+		if(btn5 === 0) {
+			gift5.style.width = "130px";
+			gift5.src =	"box1.png";
+		}
+		else if(btn5 === 1) {
+			gift5.src = "box2.png"
+		}
+		else if(btn5 === 2) {
+			gift5.src = "box3.png"
+		}
+		else if(btn5 === 3) {
+			gift5.src = "box4.png"
+		}
+		btn5++;
+	}
+
+  back.onclick = function(){
+  	location.href = "assign2.html";
+  }
+
+  next.onclick = function(){
+  	location.href = "assign4.html";
+  }
+
+
+	
+</script>
+
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+	<meta charset="utf-8">
+	<title>2021 merry christmas!</title>
+<style type="text/css">
+	body {
+			background-color: #408155;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left: 0;
+			margin-right: 0;
+			margin: 0;
+		}
+		.header {
+			position: fixed;			
+			display: flex;
+			justify-content: space-between;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  height: 150px;
+		  margin-bottom: 200px;
+		  z-index: 7777;
+		}
+		.home {
+			  float: left;
+        transition-duration: 0.15s;
+        cursor: pointer;
+		}
+
+    .home:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+		.container{
+			position: fixed;	
+			display: flex;
+			justify-content: space-between;
+			margin-top: 170px;
+			margin-left: 20px;
+			margin-right: 20px;
+			z-index: 3;
+			width: 100%;
+		}
+	
+	.title-3 {
+		position: fixed;
+		z-index: 99999;
+	}
+
+	.container1 {
+		display: flex;
+		justify-content: space-between; 
+		margin-top: 350px;
+		margin-right: 750px;
+		margin-left: 660px;
+	}
+	.elfface {
+		margin-left: 75px;
+		margin-top: 25px;
+		animation: slide-top 1s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.5s
+	}
+	.bubble {
+		margin-left: -45px;
+		margin-top: -180px;
+		animation: slide-top 0.5s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.8s
+	}
+
+
+	.santa {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 90px;
+		margin-left: 380px;
+		margin-right: 380px;
+		margin-bottom: 100px;
+	}
+
+
+	.container3 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 160px;
+		margin-left: 660px;
+		margin-right: 660px;
+		padding-bottom: 80px;
+	}
+	.back {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .back:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+	.next {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .next:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+ @keyframes slide-top {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+<div class="header">
+		<div class="container">
+			<div class="bgm" style="">
+				<div class="play" id="play1" style="position: absolute; margin-top: 14px; margin-left: 8px; z-index: 3;">
+					<img id="playbtn" src="btn_play.png" width="15px">
+					<audio id="bgmSnd" src="bgm.mp3"></audio>
+				</div>
+				<marquee class="bgmtitle" style="position: absolute; margin-top: 15px; margin-left: 85px; width: 259px;">
+					<img src="bgm-title.png" width="205px">
+				</marquee>
+				<div class="bgmbox" style="position: absolute; z-index:1"><img src="bgm.png" width="350px"></div>
+			</div>
+		<div class="home" id="home" style="margin-right: 45px;"><img src="btn_home.png" width="130px"></div>	
+		</div>	
+			<div class="title-3" style="position: absolute; z-index: 1;">
+		<img src="title-3.png" width="100%">
+			</div>
+	</div>
+
+	<div>
+		<div class="astext4" style="margin-top: 380px; text-align: center;"><img src="astext4.png" width="1200px"></div>
+	</div>
+
+	<div class="container1">
+		<div class="elfface"><img src="elfface.png" width="110px"></div>
+		<div class="bubble"><img src="bubble5.png" width="500px"></div>
+	</div>
+
+
+	<div style="text-align: center; margin-top: 150px"><img src="text6.png" width="550px">
+		</div>
+
+
+	<div class="santa">
+		<div id="draggable"><img src="santa.png" width="65px"></div>
+		<div id="draggable1"><img src="santa.png" width="65px"></div>
+		<div id="draggable2"><img src="santa.png" width="65px"></div>
+		<div id="draggable3"><img src="santa.png" width="65px"></div>
+		<div id="draggable4"><img src="santa.png" width="65px"></div>
+		<div id="draggable5"><img src="santa.png" width="65px"></div>
+		<div id="draggable6"><img src="santa.png" width="65px"></div>
+		<div id="draggable7"><img src="santa.png" width="65px"></div>
+		<div id="draggable8"><img src="santa.png" width="65px"></div>
+	</div>
+
+	<div style="text-align: center;"><img src="section.png" width="750px"></div>
+
+
+	<div class="container3">
+		<div class="back" id="back"><img src="btn_back.png" width="170px"></div>
+		<div class="next" id="next"><img src="btn_next.png" width="170px"></div>
+	</div>
+</body>
+
+
+<script type="text/javascript">
+	
+	var state = false;
+  play1.onclick = function() {
+  	console.log("asd")
+  	var p = document.getElementById('playbtn');
+    if (state) {
+    	bgmSnd.pause(); 
+    	p.src = "btn_play.png";
+    	state = false;
+    } else {
+    	bgmSnd.play(); 
+    	p.src = "btn_pause.png"; 
+    	state = true;
+    }
+  }
+
+  home.onclick = function(){
+  	location.href = "index.html";
+  }
+
+  back.onclick = function(){
+  	location.href = "assign3.html";
+  }
+
+  next.onclick = function(){
+  	location.href = "assign5.html";
+  }
+
+
+	
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#draggable1" ).draggable();
+    $( "#draggable2" ).draggable();
+    $( "#draggable3" ).draggable();
+    $( "#draggable4" ).draggable();
+    $( "#draggable5" ).draggable();
+    $( "#draggable6" ).draggable();
+    $( "#draggable7" ).draggable();
+    $( "#draggable8" ).draggable();
+  } );
+  </script>
+
+
+</html8

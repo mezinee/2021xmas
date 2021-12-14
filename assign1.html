@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="cs.css">
+	<meta charset="utf-8">
+	<title>2021 merry christmas!</title>
+<style type="text/css">
+		body {
+			background-color: #bd2a34;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left: 0;
+			margin-right: 0;
+			margin: 0;
+		}
+		.header {
+		position: fixed;			
+		display: flex;
+		justify-content: space-between;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 150px;
+		margin-bottom: 200px;
+		z-index: 7777;
+	}
+		.home {
+			  float: left;
+        transition-duration: 0.15s;
+        cursor: pointer;
+		}
+
+    .home:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+	.container{
+		position: fixed;	
+		display: flex;
+		justify-content: space-between;
+		margin-top: 170px;
+		margin-left: 20px;
+		margin-right: 20px;
+		z-index: 3;
+		width: 100%;
+	}
+	.title-2 {
+		position: fixed;
+		z-index: 99999;
+	}
+
+	.container1 {
+		display: flex;
+		justify-content: space-between; 
+		margin-top: 220px;
+		margin-right: 850px;
+		margin-left: 650px;
+	}
+	.elfface {
+		margin-left: 50px;
+		margin-top: 60px;
+		animation: slide-top 1s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.5s
+	}
+	.bubble {
+		position: relative;
+		left: -147px;
+		bottom: 15px;
+		margin-left: 15px;
+		margin-top: -60px;
+		animation: slide-top 0.5s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.8s
+	}
+
+
+		.icon {
+       transition-duration: 1s;
+       cursor: pointer;
+		}
+		.icon:hover {
+			transform: rotateY(180deg);
+		}
+
+
+	.container2 {
+		margin-top: 180px;
+	}
+	.container3 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 180px;
+		margin-left: 660px;
+		margin-right: 660px;
+		padding-bottom: 80px;
+	}
+	#result {
+		display: none;
+	}
+	.clickbt {
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .clickbt:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+
+	.back {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .back:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+	.next {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .next:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="bgm" style="">
+				<div class="play" id="play1" style="position: absolute; margin-top: 14px; margin-left: 8px; z-index: 3;">
+					<img id="playbtn" src="btn_play.png" width="15px">
+					<audio id="bgmSnd" src="bgm.mp3"></audio>
+				</div>
+				<marquee class="bgmtitle" style="position: absolute; margin-top: 15px; margin-left: 85px; width: 259px;">
+					<img src="bgm-title.png" width="205px">
+				</marquee>
+				<div class="bgmbox" style="position: absolute; z-index:1"><img src="bgm.png" width="350px"></div>
+			</div>
+		<div class="home" id="home" style="margin-right:45px"><img src="btn_home.png" width="130px"></div>	
+		</div>	
+			<div class="title-2" style="position: absolute; z-index: 1;">
+		<img src="title-2.png" width="100%">
+	</div>
+	</div>
+
+	<div>
+		<div class="astext1" style="margin-top: 400px; text-align: center;"><img src="astext1.png" width="1300px"></div>
+	</div>
+
+	<div class="container1">
+		<div class="elfface" style="margin-top: 130px; margin-left: 50px"><img src="elfface.png" width="110ppx"></div>
+		<div class="bubble" style="margin-left: 120px"><img src="bubble2.png" width="650px"></div>
+	</div>
+
+	<div class="container2" style="text-align: center;">
+		<div class="icon"><img src="wreath.png" width="150px"></div>
+		<div id="clickbtn" class="clickbt" style="margin-top: 50px"><img src="btn_click.png" width="170px">
+		</div>
+		<div style="text-align: center; margin-top: 30px"><img src="text3.png" width="400px">
+	</div>
+	
+		</div>
+	<div id="result" style="text-align: center; margin-top: 50px"><img id="gif" src="gif1.gif" width="1200px"></div>
+	<div class="container3">
+		<div class="back" id="back"><img src="btn_back.png" width="170px"></div>
+		<div class="next" id="next"><img src="btn_next.png" width="170px"></div>
+	</div>
+
+
+
+
+</body>
+
+<script type="text/javascript">
+	
+
+	var state = false;
+  play1.onclick = function() {
+  	console.log("asd")
+  	var p = document.getElementById('playbtn');
+    if (state) {
+    	bgmSnd.pause(); 
+    	p.src = "btn_play.png";
+    	state = false;
+    } else {
+    	bgmSnd.play(); 
+    	p.src = "btn_pause.png"; 
+    	state = true;
+    }
+  }
+
+  home.onclick = function(){
+  	location.href = "index.html";
+  }
+
+  back.onclick = function(){
+  	location.href = "intro.html";
+  }
+
+  next.onclick = function(){
+  	location.href = "assign2.html";
+  }
+
+  clickbtn.onclick = function() {
+  	var data = prompt("이름을 입력하세요");
+  	console.log(data)
+  	if (data) {
+  		var num = Math.floor(Math.random() * 2)
+  		if(num === 0) {
+  			document.getElementById('gif').src="gif1.gif"
+  		} else if (num === 1) {
+  			document.getElementById('gif').src="gif1-2.gif"
+  		}
+  		document.getElementById('result').style.display = 'block'
+  		document.getElementById('result').style.padding = 0
+  		
+  		document.getElementsByClassName('container2')[0].style.display='none'
+
+  	}
+  }
+
+	
+</script>
+
+</html>

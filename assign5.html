@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+	<meta charset="utf-8">
+	<title>2021 merry christmas!</title>
+<style type="text/css">
+	body {
+			background-color: #408155;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left: 0;
+			margin-right: 0;
+			margin: 0;
+		}
+		.header {
+			position: fixed;			
+			display: flex;
+			justify-content: space-between;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  height: 150px;
+		  margin-bottom: 200px;
+		z-index: 7777;
+		}
+		.home {
+        transition-duration: 0.15s;
+        cursor: pointer;
+		}
+    .home:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+		.container{
+			position: fixed;	
+			display: flex;
+			justify-content: space-between;
+			margin-top: 170px;
+			margin-left: 20px;
+			margin-right: 20px;
+			z-index: 3;
+			width: 100%;
+		}
+				.title-3 {
+		position: fixed;
+		z-index: 99999;
+			}
+
+	.container1 {
+		display: flex;
+		justify-content: space-between; 
+		margin-top: 300px;
+		margin-right: 750px;
+		margin-left: 645px;
+		margin-bottom: 150px;
+	}
+	.elfface {
+		margin-left:80px;
+		animation: slide-top 1s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.5s
+	}
+	.bubble {
+		position: relative;
+		margin-left: -40px;
+		margin-top: -150px;
+		animation: slide-top 0.5s cubic-bezier(0.200, 0.410, 0.400, 0.890) both;
+		animation-delay : 0.8s
+	}
+
+	.container2 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 70px;
+		margin-left: 600px;
+		margin-right: 600px;
+		padding-bottom: 20px;
+	}
+	.container3 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 40px;
+		margin-left: 600px;
+		margin-right: 600px;
+		padding-bottom: 100px;
+	}
+	.container4 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+		margin-left: 500px;
+		margin-right: 500px;
+		padding-bottom: 20px;
+	}
+	.container5 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 40px;
+		margin-left: 500px;
+		margin-right: 500px;
+		padding-bottom: 50px;
+	}
+
+	.container6 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 160px;
+		margin-left: 660px;
+		margin-right: 660px;
+		padding-bottom: 80px;
+	}
+
+	.back {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .back:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+	.next {
+	  float: left;
+       transition-duration: 0.15s;
+       cursor: pointer;
+	}
+
+    .next:hover{
+        top: 3px;
+        opacity: 70%;
+     }
+
+ @keyframes slide-top {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+<div class="header">
+		<div class="container">
+			<div class="bgm" style="">
+				<div class="play" id="play1" style="position: absolute; margin-top: 14px; margin-left: 8px; z-index: 3;">
+					<img id="playbtn" src="btn_play.png" width="15px">
+					<audio id="bgmSnd" src="bgm.mp3"></audio>
+				</div>
+				<marquee class="bgmtitle" style="position: absolute; margin-top: 15px; margin-left: 85px; width: 259px;">
+					<img src="bgm-title.png" width="205px">
+				</marquee>
+				<div class="bgmbox" style="position: absolute; z-index:1"><img src="bgm.png" width="350px"></div>
+			</div>
+		<div class="home" id="home" style="margin-right: 45px;"><img src="btn_home.png" width="130px"></div>	
+		</div>	
+			<div class="title-3" style="position: absolute; z-index: 1;">
+		<img src="title-3.png" width="100%">
+			</div>
+	</div>
+
+	<div>
+		<div class="astext5" style="margin-top: 380px; text-align: center;"><img src="astext5.png" width="1200px"></div>
+	</div>
+	<div class="container1">
+		<div class="elfface"><img src="elfface.png" width="110ppx"></div>
+		<div class="bubble"><img src="bubble6.png" width="530px"></div>
+	</div>
+
+
+	<div style="text-align: center; margin-top: 40px; margin-bottom: 20px;"><img src="text7.png" width="440px">
+		</div>
+
+
+	<div class="container2">
+		<div id="draggable0"><img id="pill0" src="pill.png" width="70px"></div>
+		<div id="draggable1"><img id="pill1"src="pill.png" width="70px"></div>
+		<div id="draggable2"><img id="pill2"src="pill.png" width="70px"></div>
+		<div id="draggable3"><img id="pill3"src="pill.png" width="70px"></div>
+		<div id="draggable4"><img id="pill4"src="pill.png" width="70px"></div>
+	</div>
+
+	<div class="container3">
+		<div id="draggable5" style="position:relative;"><img id="pill5"src="pill.png" width="70px"></div>
+		<div id="draggable6" style="position:relative;"><img id="pill6"src="pill.png" width="70px"></div>
+		<div id="draggable7" style="position:relative;"><img id="pill7"src="pill.png" width="70px"></div>
+		<div id="draggable8" style="position:relative;"><img id="pill8"src="pill.png" width="70px"></div>
+		<div id="draggable9" style="position:relative;"><img id="pill9"src="pill.png" width="70px"></div>
+	</div>
+
+	<div class="container4">
+		<div id="droppable0"><img id="roo0" src="roo2.png" width="90px"></div>
+		<div id="droppable1"><img id="roo1" src="roo.png" width="90px"></div>
+		<div id="droppable2"><img id="roo2" src="roo2.png" width="90px"></div>
+		<div id="droppable3"><img id="roo3" src="roo2.png" width="90px"></div>
+		<div id="droppable4"><img id="roo4" src="roo.png" width="90px"></div>
+	</div>
+
+	<div class="container4">
+		<div id="droppable5"><img id="roo5" src="roo2.png" width="90px"></div>
+		<div id="droppable6"><img id="roo6" src="roo2.png" width="90px"></div>
+		<div id="droppable7"><img id="roo7" src="roo2.png" width="90px"></div>
+		<div id="droppable8"><img id="roo8" src="roo.png" width="90px"></div>
+		<div id="droppable9"><img id="roo9" src="roo.png" width="90px"></div>
+	</div>
+
+
+
+	<div class="container6">
+		<div class="back" id="back"><img src="btn_back.png" width="170px"></div>
+		<div class="next" id="next"><img src="btn_next.png" width="170px"></div>
+	</div>
+</body>
+
+
+<script type="text/javascript">
+	
+	var state = false;
+  play1.onclick = function() {
+  	console.log("asd")
+  	var p = document.getElementById('playbtn');
+    if (state) {
+    	bgmSnd.pause(); 
+    	p.src = "btn_play.png";
+    	document.getElementById('marquee1').stop();
+    	state = false;
+    } else {
+    	bgmSnd.play(); 
+    	document.getElementById('marquee1').start();
+    	p.src = "btn_pause.png"; 
+    	state = true;	
+    }
+  }
+
+  home.onclick = function(){
+  	location.href = "index.html";
+  }
+
+  back.onclick = function(){
+  	location.href = "assign4.html";
+  }
+
+  next.onclick = function(){
+  	location.href = "ending.html";
+  }
+	
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+  	for(let i=0; i<10; i++) {
+    	$( `#draggable${i}` ).draggable();
+
+	    $( `#droppable${i}` ).droppable({
+	      drop: function( event, ui ) {
+	        $(`#roo${i}`).attr("src","roo.png");
+	        $(`#pill${i}`).css("display", "none");
+	      }
+	    });
+	}
+  } );
+  </script>
+
+</html>
