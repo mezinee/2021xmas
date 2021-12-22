@@ -167,11 +167,16 @@
 		</div>
 
 		<div style="text-align: center; margin-bottom: 180px"><img class="bell" src="bell.png" width="80px"></div>
-
+		<style>
+			.santa-cross {height: 150px;  padding-top: 50px;}
+			#cross{width: 350px; display: block; position: absolute;}
+		</style>
+		<div class="santa-cross">
+			<img src="santar.png" id="cross" width="400px">
 		</div>
 
 		<div class="container3">
-			<div class="elfface" style="margin-left:50px; margin-top:200px;"><img src="elfface.png" width="110px"></div>
+			<div class="elfface" style="margin-left:50px; margin-top:250px;"><img src="elfface.png" width="110px"></div>
 			<div class="bubble" style="margin-bottom: 50px;"><img src="bubble7.png" width="500px"></div>
 		</div>
 
@@ -288,4 +293,17 @@ function drop_handler(event) {
 
 
   </script>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			var $window = $(window);
+			var $box = $("#cross");
+
+			$window.scroll(function() {
+			    var scrollTop = $window.scrollTop();
+			    console.log(scrollTop);
+			    if(scrollTop >= 800 && scrollTop < 1200) {
+			      $box.css({right: (40 + (scrollTop-800)/2)+"%"})
+			    }
+			});
+		</script>
 </html>

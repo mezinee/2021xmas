@@ -258,14 +258,21 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
   <script>
+  var tt;
   $( function() {
   	for(let i=0; i<10; i++) {
     	$( `#draggable${i}` ).draggable();
+    	$( `#draggable${i}` ).on('dragstart', function(evt) {
+   				tt = event.target.id;                    
+   		});
 
 	    $( `#droppable${i}` ).droppable({
 	      drop: function( event, ui ) {
+
+	     
 	        $(`#roo${i}`).attr("src","roo.png");
-	        $(`#pill${i}`).css("display", "none");
+
+	        document.getElementById("pill" + tt.slice(4,5)).style.display = "none";
 	      }
 	    });
 	}
